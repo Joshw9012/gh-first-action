@@ -1,0 +1,10 @@
+name: First Workflow     #name of the workflow
+on: workflow_dispatch  #on is the trigger of this workflow to run - workflow_dispatch: manually trigger this workflow
+jobs:              #jobs: defines the jobs to be done, and the code line following this "jobs": must be indented, as they are belonging to this "jobs".
+  first-job:       #first-job  is the name (not reserved name  - can be any name)
+     runs-on: ubuntu-latest        #the environment the first-job runs on
+     steps:
+       - name: Print greeting    #name of this step
+         run: echo "Hellow World!"                      #script or commands  or Action
+       - name: Print goodby
+         run: echo "Done - bye!"
